@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinkers Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        nav form {
+            margin-right: 10px; /* Adjust margin for form */
+        }
+        nav input[type="text"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        nav input[type="submit"],
+        nav a {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline for links */
+        }
+        nav input[type="submit"]:hover,
+        nav a:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px; /* Gap between articles */
+        }
+        article {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(100% - 40px); /* Width of article box (100% - 2 * padding) */
+            margin: 0 auto; /* Center the article box */
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }
+        article h2 {
+            margin-top: 0;
+        }
+        article p {
+            margin-bottom: 10px;
+        }
+        article .author {
+            font-style: italic;
+            color: #777;
+        }
+        article a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        article a:hover {
+            color: #555;
+        }
+        article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px 10px 0 0; /* Rounded corners only on the top */
+        }
+        header a {
+            text-decoration: none;
+            color: #fff;
+        }
+        header a:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Name</h1>
+        <nav>
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <header>
+                <h2>Article Title</h2>
+                <p class="author">Written by <span>Author Name</span></p>
+            </header>
+            <img src="article-image.jpg" alt="Article Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+            <!-- More paragraphs and content -->
+            <footer>
+                <p>Published on <time datetime="2024-05-12">May 12, 2024</time></p>
+                <p>Tags: <a href="#">Tag1</a>, <a href="#">Tag2</a>, <a href="#">Tag3</a></p>
+            </footer>
+        </article>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Thinkers Repository</p>
+    </footer>
+</body>
+</html>

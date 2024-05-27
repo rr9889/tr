@@ -1,0 +1,228 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #333; 
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #333;
+}
+
+nav form {
+    margin-right: 10px; /* Adjust margin for form */
+}
+
+nav input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+nav input[type="submit"],
+nav a {
+    padding: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a {
+    color: #fff; /* Updated text color */
+    padding: 10px 20px; /* Add padding to the top and bottom */
+    margin-right: 10px; /* Add margin to the right of all buttons */
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Ensures the buttons are block-level elements */
+    min-width: 100px; /* Set a minimum width for the buttons */
+    text-align: center; /* Center aligns the text */
+}
+
+nav a:not(:last-child) {
+    margin-right: 10px; /* Add margin to the right of all buttons except the last one */
+}
+nav input[type="submit"]:hover,
+nav a:hover {
+    background-color: #fff; /* Updated background color */
+    color: #333; /* Updated text color */
+}
+
+.wrapper {
+    flex-grow: 1; /* Expand to fill remaining vertical space */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 0px; /* Add margin to the bottom of the main content */
+}
+
+article {
+    flex: 0 0 auto;
+    width: 600px; /* Adjust the width as needed */
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin between articles */
+    margin-bottom: 20px; /* Add margin at the bottom of each article */
+}
+
+article h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+article p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+article .author {
+    font-style: italic;
+    color: #777;
+}
+
+article a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #0056b3;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 992px) {
+    /* Styles for screens up to 992px in width */
+    /* Example: Adjustments for tablets */
+}
+
+@media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px in width */
+    /* Example: Adjustments for smaller tablets and large phones */
+    nav {
+        flex-direction: column;
+    }
+    nav label {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+    nav input[type="checkbox"] {
+        display: none;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    nav input[type="checkbox"]:checked + ul {
+        display: flex;
+    }
+
+    /* Adjust padding for buttons */
+    nav input[type="submit"],
+    nav a {
+        padding: 10px 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Styles for screens up to 576px in width */
+    /* Example: Adjustments for mobile phones */
+}
+
+@media screen and (max-width: 480px) {
+    /* Styles for screens up to 480px in width */
+    /* Example: Adjustments for smaller mobile phones */
+}
+
+/* Landscape orientation */
+@media screen and (orientation: landscape) {
+    /* Styles for landscape orientation */
+}
+
+/* Portrait orientation */
+@media screen and (orientation: portrait) {
+    /* Styles for portrait orientation */
+}
+
+.article-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.article {
+    flex: 0 0 auto;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent element */
+}
