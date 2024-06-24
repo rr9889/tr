@@ -12,42 +12,55 @@
             <h1><a href="../index.html">Thinkers Repository</a></h1>
         </div>
         <nav>
-            <a href="articles.html">Articles</a>
+            <a href="article.html">Articles</a>
             <a href="lit.html">Literature</a>
             <a href="media.html">Media</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
->
+
     <main>
-        <article class="cnn-article">
-            <h2>Literature</h2>
-            <p class="author">Thinkers Repository Staff</p>
-            <p class="date">View some of the current books we have created or recommended books.</p>
-            <div class="table-of-contents"></div> <!-- TOC will be inserted here -->
-            <div class="body">
-                <h3 id="one">Political</h3>
-                <p>Brotherhood Economics (1936) - Kagawa, Toyohiko</p>
-                <p>Industrial Society and Its Future (1995) - Kaczynski, Theodore</p>
-                <p>The True Levellers Standard Advanced (1649) - Winstanley, Gerrard</p>
-                <h3 id="two">Help Books</h3>
-                <p>Parenting: Getting It Right (2021) - Stanley, Andy & Sandra</p>
-                <p>How to Win Friends and Influence People (1936) - Carnegie, Dale</p>
-                <h3 id="three">TR Original Books</h3>
-                <p>Insights into Early Christianity (2024)</p>
-                <p>Gold Age Pirate  Women (2024)</p>
-                <p>Excerpts from Nazi Nudism Magazines (2024)</p>
-                <h3 id="four">Lifestyle</h3>
-                <p>Creating the Low-Budget Homestead (2012) - Gregersen, Steven</p>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, feel free to contact us through the form below.</p>
+            
+            <form action="/submit_contact_form" method="post" class="contact-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            
+            <div class="contact-info">
+                <h3>Our Contact Information</h3>
+                <p>Email: info@thinkersrepository.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Thinkers Lane, Knowledge City, IM 12345</p>
             </div>
-        </article>
+        </section>
     </main>
+    
     <footer>
         <p>&copy; 2024 Thinkers Repository</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/article.js"></script>
+    <script src="../js/email.js"></script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Dynamic File List</title>
+    <style>
+        .file-list a {
+            display: block;
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><a href="../index.html">Thinkers Repository</a></h1>
+        </div>
+        <nav>
+            <a href="article.html">Articles</a>
+            <a href="lit.html">Literature</a>
+            <a href="media.html">Media</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="cnn-article">
+            <h2>Dynamic File List</h2>
+            <div class="table-of-contents">
+                <h3>Files</h3>
+                <ul id="file-list" class="file-list mw-allpages-chunk"></ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thinkers Repository</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/files')
+                .then(response => response.json())
+                .then(files => {
+                    const fileList = document.getElementById('file-list');
+                    fileList.innerHTML = '';
+                    files.forEach(file => {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = `/pages/${file}`;
+                        link.textContent = file.replace('.html', '');
+                        listItem.appendChild(link);
+                        fileList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching file list:', error));
+        });
+    </script>
+</body>
+</html>
