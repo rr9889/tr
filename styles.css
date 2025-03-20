@@ -1,0 +1,96 @@
+/* Base styles (mobile-first) */
+body {
+  color: black;
+  background-color: white;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header, footer {
+  background-color: #ffcc01;
+  padding: 1rem;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack vertically on small screens */
+  min-height: 300px;
+}
+
+.sidebar {
+  width: 100%; /* Full width on mobile */
+  background-color: #cccccc;
+  padding: 1rem;
+}
+
+.main-content {
+  width: 100%; /* Full width on mobile */
+  padding: 1rem;
+}
+
+table {
+  width: 100%; /* Changed from 110% to fit within container */
+  border-collapse: collapse;
+  overflow-x: auto; /* Allows horizontal scrolling on small screens */
+  display: block; /* Ensures table scrolls properly */
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px; /* Slightly reduced for smaller screens */
+  text-align: center;
+  font-size: 14px; /* Readable on mobile */
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+img {
+  width: 60px; /* Smaller base size for mobile */
+  height: auto;
+  max-width: 100%; /* Prevents overflow */
+}
+
+h1, h2 {
+  margin-top: 0;
+  font-size: 1.5rem; /* Adjusted for mobile readability */
+}
+
+/* Medium screens (tablets, 668px and up) */
+@media (min-width: 668px) {
+  .content-wrapper {
+      flex-direction: row; /* Sidebar and main content side by side */
+  }
+  .sidebar {
+      width: 20%;
+  }
+  .main-content {
+      width: 80%;
+  }
+  img {
+      width: 80px; /* Larger images for bigger screens */
+  }
+  th, td {
+      padding: 10px; /* Restore original padding */
+      font-size: 16px; /* Larger text for readability */
+  }
+}
+
+/* Large screens (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  img {
+      width: 100px; /* Even larger images for desktop */
+  }
+  th, td {
+      font-size: 18px; /* Optimal for desktop */
+  }
+}
